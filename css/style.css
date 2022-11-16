@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* header{
+    height: 95vh;
+    min-height: 400px;
+    background-size: cover;
+    background-image: url(../images/Kerala_header.jpg);
+} */
+
+.popularDestination {
+
+    padding-left: 3rem;
+    padding-top: 3rem;
+    line-height: 2;
+    font-size: large;
+    text-align: justify;
+}
+
+.keralaExplanation {
+    /* padding-left: 3rem; */
+    padding-top: 3rem;
+    line-height: 2;
+    font-size: large;
+    text-align: justify;
+}
+
+#exploreKerala {
+    padding-top: 6rem;
+    margin-left: 3rem;
+}

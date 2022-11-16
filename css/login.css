@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.row {
+    background-color: rgb(234, 234, 234);
+    border-radius: 30px;
+    box-shadow: 12px 12px 22px grey;
+}
+
+img {
+    border-radius: 30px;
+}
+
+.bu1 {
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    background-color:
+        black;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.bu1:hover {
+    background: white;
+    border: 1px solid;
+    color: black;
+}
+
+.Form {
+    padding-top: 6rem;
+}
