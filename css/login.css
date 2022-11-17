@@ -39,3 +39,31 @@ img {
 .Form {
     padding-top: 6rem;
 }
+
+.pass {
+    position: relative;
+}
+
+#showBt {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.indicator {
+    height: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.indicator span {
+    width: 100%;
+    height: 150%;
+    background: red;
+    border-radius: 10px;
+}

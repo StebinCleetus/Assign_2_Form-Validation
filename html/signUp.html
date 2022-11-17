@@ -43,8 +43,10 @@
             </div>
         </div>
     </nav>
-    <!-- loginForm started Here -->
-    <section class="Form  mx-5">
+
+    <!-- Signup Form started Here -->
+
+    <section class="Form  ">
 
         <div class="container">
             <div class="row g-0">
@@ -60,38 +62,79 @@
                     <form action="../index.html">
                         <div class="form-row">
                             <div class="col-lg-7  ">
-                                <input type="text" placeholder="Name " class="form-control my-3 p-2">
+                                <input type="text" placeholder="Name " class="form-control  my-3 p-2">
                             </div>
                         </div>
+
+                        <!-- Email section From here -->
+
                         <div class="form-row">
                             <div class="col-lg-7  ">
-                                <input type="email" placeholder="Email " id="email" onclick="return emailValidate();" oninput="return emailValidate();" onblur="clear1();" class="form-control my-3 p-2">
+                                <input type="email" placeholder="Email " id="email" onclick="return emailValidate();"
+                                    oninput="return emailValidate();" onblur="clear1();" class="form-control my-3 p-2">
                                 <div id="errorEmail" class="form-text"></div>
                             </div>
                         </div>
+
+                        <!-- Mobile section From here -->
+
                         <div class="form-row">
                             <div class="col-lg-7  ">
-                                <input type="text" placeholder="Mobile Number "id="mobile" class="form-control my-3 p-2">
-                                <!-- <label for="">yoyoy</label> -->
+                                <input type="text" placeholder="Mobile Number " id="mobile"
+                                    onclick="return  mobileValidate();" oninput="return  mobileValidate();"
+                                    onblur="clear2();" class="form-control my-3 p-2">
+                                <div id="errorMobile" class="form-text"></div>
+                            </div>
+                        </div>
+
+                        <!-- Password section From here -->
+
+                        <div class="form-row">
+                            <div class="col-lg-7 pass">
+                                <input type="password" placeholder="******* " id="pwd" oninput="return  passValidate();"
+                                    class="form-control my-3 p-2 ">
+                                <span id="showBt">Show</span>
+
+
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="col-lg-7">
-                                <input type="password" placeholder="******* " id="pwd"class="form-control my-3 p-2">
-                                <!-- <label for="">yoyoy</label> -->
-                            </div>
-                            <div class="form-row">
-                                <div class="col-lg-7">
-                                    <button onclick="return validate();"class="bu1 mt-3 mb-2">Sign Up</button>
-                                </div>
+                            <div class="col-lg-7 ">
+                                <div id="errorPwd" class="form-text"></div>
                             </div>
 
-                            <p>Already registered ? <a href="login.html">login here.</a></p>
+                        </div>
+
+                        <!-- Password bar section From here -->
+
+
+                        <div class="form-row">
+                            <div class="col-lg-7 indicator">
+                                <span class="weak">1</span>
+                                <span class="medium">2</span>
+                                <span class="strong">3</span>
+                                <i class="fa fa-eye"></i>
+                            </div>
+                            <div class="descr">your password</div>
+                        </div>
+
+                        <!-- SignUp button from here -->
+
+                        
+                        <div class="form-row">
+                            <div class="col-lg-7">
+                                <button onclick="return validate();" class="bu1 mt-3 mb-2">Sign Up</button>
+                            </div>
+                        </div>
+
+                        <p>Already registered ? <a href="login.html">login here.</a></p>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+
+
     <footer class="py-4 text-center lh-lg mt-5" style="background-color: #e1dbe7;">
         <p class="fs-6">2022 Stebin Cleetus. All rights reserved</p>
         <a href="#"><img src="../images/facebook.svg" alt="facebook"></a>
