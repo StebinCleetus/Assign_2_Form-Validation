@@ -53,7 +53,7 @@ img {
     font-weight: bold;
 }
 
-.indicator {
+/* .indicator {
     height: 5px;
     display: flex;
     align-items: center;
@@ -66,4 +66,10 @@ img {
     height: 150%;
     background: red;
     border-radius: 10px;
-}
+} */
+
+.progress-bar {
+    margin-top : 10px;
+    border-radius: 10px;
+    color: aliceblue;
+  }
