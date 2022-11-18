@@ -17,6 +17,21 @@ function validate() {
         return false;
     }
 }
+function loginValidate() {
+   
+
+    let temp = document.getElementById('password-text');
+    // console.log(temp.innerHTML);
+    // console.log(errorMobile.innerText);
+    // console.log(name1.value);
+
+    if (emailValidate() === true  && temp.innerHTML == '<small class="progress-bar bg-success" style="width: 100%">Strong</small>') {
+        console.log('✅ function returns true');
+        return true;
+    } else {
+        return false;
+    }
+}
 
 function emailValidate() {
 
@@ -82,11 +97,6 @@ function passValidate() {
     errorPwd.style.display = "block";
     errorPwd.innerHTML = "Minimum 8 characters, at least one uppercase, and one lower case, must contain at least one number";
     errorPwd.style.color = "#1490c9";
-
-
-
-
-
 }
 
 
