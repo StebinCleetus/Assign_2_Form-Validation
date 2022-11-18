@@ -4,13 +4,16 @@ let mobile = document.getElementById('mobile');
 
 function validate() {
     console.log(errorEmail.innerText);
-    console.log(errorMobile.innerText);
-    let temp = errorEmail.innerText;
-    if (temp == "valid") {
-        console.log(errorMobile.innerText);
+
+    let temp = document.getElementById('password-text');
+    // console.log(temp.innerHTML);
+    // console.log(errorMobile.innerText);
+    // console.log(name1.value);
+
+    if (name1.value !="" && emailValidate() === true && mobileValidate() === true && temp.innerHTML == '<small class="progress-bar bg-success" style="width: 100%">Strong</small>') {
+        // console.log('✅ function returns true');
         return true;
     } else {
-        console.log(errorMobile.innerText);
         return false;
     }
 }
@@ -41,7 +44,7 @@ function emailValidate() {
 function mobileValidate() {
 
     let regexp2 = /^([0-9]{3})([0-9\ -.]{1})([0-9]{3})([0-9\ -.]{1})([0-9]{2,4})$/;
-    console.log(mobile.value);
+    // console.log(mobile.value);
 
     // console.log(result);
 
@@ -51,7 +54,7 @@ function mobileValidate() {
             // console.log(result);
             let result = mobile.value.match(/\d/g).length;
             if (result == 10) {
-                console.log(mobile.value.length);
+                // console.log(mobile.value.length);
                 errorMobile.innerHTML = "Your Mobile number is Valid <br>";
                 errorMobile.style.color = "green";
                 return true;
@@ -107,7 +110,7 @@ function clear2() {
 
 function clear3() {
     let temp = document.getElementById('password-text');
-    console.log(temp.innerHTML);
+    // console.log(temp.innerHTML);
     if (temp.innerHTML == '<small class="progress-bar bg-success" style="width: 100%">Strong</small>') {
         errorPwd.style.display = "none";
         password.style.border = "none";
@@ -130,7 +133,7 @@ function isGood(password) {
     regex.push("[A-Z]"); //Uppercase Alphabet.
     regex.push("[a-z]"); //Lowercase Alphabet.
     regex.push("[0-9]"); //Digit.
-    
+
 
     var passed = 0;
 
@@ -164,5 +167,6 @@ function isGood(password) {
 
     }
     password_strength.innerHTML = strength;
+    
 
 }
