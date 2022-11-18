@@ -93,7 +93,8 @@
                        
                         <div class="form-row">
                             <div class="col-lg-7  ">
-                        <input id="password" type="password" value="" name="password" placeholder="******* " class="form-control my-3 p-2" onkeyup="isGood(this.value)" />
+                        <input id="password" type="password" value="" name="password" placeholder="******* " class="form-control my-3 p-2" onclick="passValidate();" onkeyup="isGood(this.value)"onblur="clear3();" />
+                        <div id="errorPwd" class="form-text"></div>
                         <small class="help-block" id="password-text"></small>
                        
                     </div>

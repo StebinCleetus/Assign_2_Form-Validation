@@ -76,17 +76,14 @@ function mobileValidate() {
 }
 
 function passValidate() {
-    let regexp3 = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
-    if (regexp3.test(pwd.value)) {
-        errorPwd.innerHTML = "valid <br>";
-        errorPwd.style.color = "green";
-        return true;
-    } else {
-        errorPwd.innerHTML = "invalid <br>";
-        errorPwd.style.color = "red";
-        return false;
+    errorPwd.style.display = "block";
+    errorPwd.innerHTML = "Minimum 8 characters, at least one uppercase, and one lower case, must contain at least one number";
+    errorPwd.style.color = "#1490c9";
 
-    }
+
+
+
+
 }
 
 
@@ -108,14 +105,24 @@ function clear2() {
     }
 }
 
+function clear3() {
+    let temp = document.getElementById('password-text');
+    console.log(temp.innerHTML);
+    if (temp.innerHTML == '<small class="progress-bar bg-success" style="width: 100%">Strong</small>') {
+        errorPwd.style.display = "none";
+        password.style.border = "none";
+    } else {
+        password.style.border = "2px solid red";
+    }
+}
 
 function isGood(password) {
     var password_strength = document.getElementById("password-text");
 
     //TextBox left blank.
     if (password.length == 0) {
-      password_strength.innerHTML = "";
-      return;
+        password_strength.innerHTML = "";
+        return;
     }
 
     //Regular Expressions.
@@ -123,33 +130,39 @@ function isGood(password) {
     regex.push("[A-Z]"); //Uppercase Alphabet.
     regex.push("[a-z]"); //Lowercase Alphabet.
     regex.push("[0-9]"); //Digit.
-    regex.push("[$@$!%*#?&]"); //Special Character.
+    
 
     var passed = 0;
 
     //Validate for each Regular Expression.
     for (var i = 0; i < regex.length; i++) {
-      if (new RegExp(regex[i]).test(password)) {
-        passed++;
-      }
+        if (new RegExp(regex[i]).test(password)) {
+            if (passed < 2) {
+                passed++;
+            } else if (password.length >= 8) {
+                passed++;
+            } else {}
+
+
+        }
     }
 
     //Display status.
     var strength = "";
     switch (passed) {
-      case 0:
-      case 1:
-      case 2:
-        strength = "<small class='progress-bar bg-danger' style='width: 40%'>Weak</small>";
-        break;
-      case 3:
-        strength = "<small class='progress-bar bg-warning' style='width: 60%'>Medium</small>";
-        break;
-      case 4:
-        strength = "<small class='progress-bar bg-success' style='width: 100%'>Strong</small>";
-        break;
+
+        case 0:
+        case 1:
+            strength = "<small class='progress-bar bg-danger' style='width: 40%'>Weak</small>";
+            break;
+        case 2:
+            strength = "<small class='progress-bar bg-warning' style='width: 60%'>Medium</small>";
+            break;
+        case 3:
+            strength = "<small class='progress-bar bg-success' style='width: 100%'>Strong</small>";
+            break;
 
     }
     password_strength.innerHTML = strength;
 
-  }
+}
